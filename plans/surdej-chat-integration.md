@@ -9,7 +9,7 @@ This checklist prepares the repository to integrate the Surdej chat frontend whi
 | Token bootstrap and session storage | `src/lib/auth.tsx` | Reuse `surdej-token` query parameter capture and `sessionStorage` token for chat, blob, analysis, and MCP calls. |
 | Shared Surdej API fetch helpers | `src/services/surdej-api.ts` | Extend the existing `ai`, `blobs`, `analyze`, `jobs`, `workers`, and future MCP/use-case service wrappers here before wiring UI components. |
 | Authenticated app shell | `src/App.tsx` | Add route or shell state for the chat experience after `DashboardPage` verifies auth and health. |
-| Styling and UI primitives | `src/index.css`, `components.json`, Tailwind/Vite config | Match imported chat components to the existing Tailwind/shadcn setup. |
+| Styling and UI primitives | `src/index.css`, `components.json`, Tailwind/Vite config | Match imported chat components to the existing Tailwind/shadcn/ui setup. |
 | Build validation | `package.json` | Use `npm run build` and `npm run typecheck` once dependency installation and existing TypeScript config issues are resolved. |
 
 ## Phase 1: Scaffold and API connection (ready to begin)
@@ -51,7 +51,7 @@ This checklist prepares the repository to integrate the Surdej chat frontend whi
 
 ## Phase 4: File analysis and worker-backed flows
 
-- [ ] Define the lifecycle for uploaded files: accepted MIME types, maximum size, virus/security scanning status, retention, and deletion.
+- [ ] Define the lifecycle for uploaded files in the Surdej API/security requirements docs: accepted MIME types, maximum size, virus/security scanning status, retention, and deletion.
 - [ ] Wire file uploads to `POST /api/blobs` through `blobs.upload` and include resulting blob references in chat or analysis requests.
 - [ ] Display worker/job progress using existing `workers` and `jobs` wrappers or new typed helpers when the Surdej API exposes a dedicated analysis status endpoint.
 - [ ] Surface analysis results in chat messages with clear provenance and retry/error handling.
