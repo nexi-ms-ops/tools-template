@@ -31,6 +31,9 @@ function NoTokenPage() {
           Append <code className="bg-muted px-1.5 py-0.5 rounded text-xs font-mono">?surdej-token=YOUR_TOKEN</code> to
           the URL to authenticate.
         </p>
+        <p className="text-muted-foreground text-sm mt-2">
+          Contact <strong>Mikkel</strong> to get a token.
+        </p>
       </div>
     </div>
   );
